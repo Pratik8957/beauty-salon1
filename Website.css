@@ -1,0 +1,256 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffe4e1;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Services Section */
+#services {
+    text-align: center;
+}
+
+#services h2 {
+    color: #ff6f61;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.service h3 {
+    margin-bottom: 5px;
+    color: #ff6f61;
+}
+
+.service p {
+    margin: 5px 0;
+}
+
+/* Gallery Section */
+#gallery h2 {
+    text-align: center;
+    color: #ff6f61;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.gallery-grid img {
+    width: 80%;
+    height: 350px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Booking Form */
+#booking h2 {
+    text-align: center;
+    color: #ff6f61;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input:focus, form select:focus {
+    outline: none;
+    border-color: #ff6f61;
+    box-shadow: 0 0 4px rgba(255, 111, 97, 0.6);
+}
+
+form button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background: #e65b54;
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact h2 {
+    text-align: center;
+    color: #ff6f61;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+#contact p a {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+#contact p a:hover {
+    color: #e65b54;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service img {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    form {
+        width: 90%;
+    }
+}
